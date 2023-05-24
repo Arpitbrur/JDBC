@@ -16,7 +16,7 @@ public class laptopController {
 		laptop laptop = new laptop();
 		laptopservice laptopservice = new laptopservice();
 		while(true) {
-			System.out.println("1.InsertLaptop\n2.UpdateLaptop\n3.DeleteLaptop\n4.DisplayLaptop");
+			System.out.println("1.InsertLaptop\n2.UpdateLaptop\n3.DeleteLaptop\n4.DisplayLaptop\n5.Exit");
 			System.out.println("Choose your choice");
 			
 			int ch = scanner.nextInt();
@@ -65,12 +65,21 @@ public class laptopController {
 				System.out.println("Name = "+laptop2.getName());
 				System.out.println("Price = "+laptop2.getPrice());
 				System.out.println("Color = "+laptop2.getColor());
+				System.out.println("");
+
 				}
-	
-				break;
+            }break;
+			
+			case 5:{
+				System.out.println("System closed");
+				System.exit(ch);
+			}break;
+			
+			default:{
+				System.out.println("Invalid choice");
+			
 			}
 		}
-		
-		}
+	  }
 	}
 }
